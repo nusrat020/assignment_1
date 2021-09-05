@@ -1,0 +1,2 @@
+myfancyjavaproject.Singleton
+myfancyjavaproject.MyFancyJavaProject
