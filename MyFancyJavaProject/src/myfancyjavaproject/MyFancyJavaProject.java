@@ -11,11 +11,21 @@ package myfancyjavaproject;
  */
 
 class Singleton {
+    private static Singleton single_instance = null;
+ 
     public String s;
-
-    public Singleton()
+ 
+    private Singleton()
     {
-        s = "Hello I am not a singleton design pattern";
+        s = "Hello I am a string part of Singleton class";
+    }
+ 
+    public static Singleton getInstance()
+    {
+        if (single_instance == null)
+            single_instance = new Singleton();
+ 
+        return single_instance;
     }
 }
 public class MyFancyJavaProject {
@@ -25,11 +35,11 @@ public class MyFancyJavaProject {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Singleton x = new Singleton();
-
-        Singleton y = new Singleton();
-
-        Singleton z = new Singleton();
+        Singleton x = Singleton.getInstance();
+ 
+        Singleton y = Singleton.getInstance();
+ 
+        Singleton z = Singleton.getInstance();
 
         // Printing the hash code for above variables
         System.out.println("Hashcode of x is "
