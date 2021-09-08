@@ -15,7 +15,7 @@ class Singleton {
 
     public Singleton()
     {
-        s = "Hello I am not a singleton design pattern";
+        s = "This is not a singleton design pattern";
     }
 }
 public class MyFancyJavaProject {
